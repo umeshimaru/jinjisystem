@@ -1,2 +1,2 @@
-class Shain < ApplicationRecord
+class Shain < ActiveRecord::Base
 end

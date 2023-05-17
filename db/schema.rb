@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_16_070716) do
+ActiveRecord::Schema.define(version: 2023_05_16_151139) do
 
   create_table "shains", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "yakushoku"
     t.integer "kihonkyu"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

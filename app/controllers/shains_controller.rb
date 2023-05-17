@@ -1,5 +1,5 @@
 class ShainsController < ApplicationController
-  before_action :set_shain, only: %i[ show edit update destroy ]
+  before_action :set_shain, only: %i[ show edit update destroy standup]
 
   # GET /shains or /shains.json
   def index
@@ -55,6 +55,11 @@ class ShainsController < ApplicationController
       format.html { redirect_to shains_url, notice: "Shain was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def standup
+
+  
   end
 
   private

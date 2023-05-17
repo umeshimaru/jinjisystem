@@ -1,5 +1,5 @@
 class ShainsController < ApplicationController
-  before_action :set_shain, only: %i[ show edit update destroy ]
+  before_action :set_shain, only: %i[ show edit update destroy standup]
 
   # GET /shains or /shains.json
   def index
@@ -25,8 +25,8 @@ class ShainsController < ApplicationController
 
     respond_to do |format|
       if @shain.save
-        format.html { redirect_to shain_url(@shain), notice: "Shain was successfully created." }
-        format.json { render :show, status: :created, location: @shain }
+        format.html { redirect_to @shain.becomes(Shain), notice: "Shain was successfully created." }
+        format.json { render :show, status: :created, location: @shain.becomes(Shain) }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @shain.errors, status: :unprocessable_entity }
@@ -38,8 +38,8 @@ class ShainsController < ApplicationController
   def update
     respond_to do |format|
       if @shain.update(shain_params)
-        format.html { redirect_to shain_url(@shain), notice: "Shain was successfully updated." }
-        format.json { render :show, status: :ok, location: @shain }
+        format.html { redirect_to @shain.becomes(Shain), notice: "Shain was successfully updated." }
+        format.json { render :show, status: :ok, location: @shain.becomes(Shain) }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @shain.errors, status: :unprocessable_entity }
@@ -57,6 +57,11 @@ class ShainsController < ApplicationController
     end
   end
 
+  def standup
+
+  
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shain
@@ -65,6 +70,6 @@ class ShainsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shain_params
-      params.require(:shain).permit(:name, :yakushoku, :kihonkyu)
+      params.require(:shain).permit(:name, :type, :kihonkyu)
     end
 end

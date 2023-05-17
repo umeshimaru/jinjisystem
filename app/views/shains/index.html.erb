@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Shains</h1>
+<h1>社員一覧</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Yakushoku</th>
-      <th>Kihonkyu</th>
+      <th>名前</th>
+      <th>役職</th>
+      <th>基本給</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= shain.name %></td>
         <td><%= shain.yakushoku %></td>
         <td><%= shain.kihonkyu %></td>
-        <td><%= link_to 'Show', shain.becomes(Shain) %></td>
-        <td><%= link_to 'Edit', edit_shain_path(shain) %></td>
-        <td><%= link_to 'Destroy', shain.becomes(Shain), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', shain.becomes(Shain) %></td>
+        <td><%= link_to '編集', edit_shain_path(shain) %></td>
+        <td><%= link_to '削除', shain.becomes(Shain), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Shain', new_shain_path %>
+<%= link_to '新しい社員', new_shain_path %>

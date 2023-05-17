@@ -1,4 +1,9 @@
 class Bucho < Shain
+
+  def calculate_salary(kihonkyu)
+    kihonkyu * 10
+  end
+
   def yakushoku
     '部長'
   end

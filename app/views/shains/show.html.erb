@@ -1,22 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>名前:</strong>
   <%= @shain.name %>
 </p>
 
 <p>
-  <strong>Yakushoku:</strong>
+  <strong>役職:</strong>
   <%= @shain.yakushoku %>
 </p>
 
 </p>
-  <strong>Kihonkyu:</strong>
+  <strong>基本給:</strong>
   <%= @shain.kihonkyu %>
 </p>
 
 </p>
-  <strong>Salary:</strong>
+  <strong>給料:</strong>
   <%= @shain.calculate_salary(@shain.kihonkyu) %>
 </p>
 

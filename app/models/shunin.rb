@@ -1,8 +1,8 @@
 class Shunin < Shain
 
-  def calculate_salary(@shain.kihonkyu)
-    kihonkyu * 5
-    end
+  def calculate_salary(kihonkyu)
+    kihonkyu * 2
+  end
 
   def yakushoku
     '主任'

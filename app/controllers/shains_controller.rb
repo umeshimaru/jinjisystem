@@ -4,6 +4,7 @@ class ShainsController < ApplicationController
   # GET /shains or /shains.json
   def index
     @shains = Shain.all
+    
   end
 
   # GET /shains/1 or /shains/1.json
